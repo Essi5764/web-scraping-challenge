@@ -1,13 +1,17 @@
 #import dependencies
-from bs4 import BeautifulSoup as bs
-from splinter import Browser
+
+import splinter
+import selenium
 import os
 import pandas as pd
 import time
 from selenium import webdriver
+from bs4 import BeautifulSoup as bs
+from splinter import Browser
+
 
 def init_browser():
-    executable_path = {"executable_path":"C:\chromedriver_win32\chromedriver"}
+    executable_path = {"executable_path": "C:\\Users\\Essi\\Downloads\\chromedriver_win32\\chromedriver"}
     return Browser("chrome", **executable_path, headless = False)
 
 def scrape():
